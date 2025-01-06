@@ -1,3 +1,5 @@
+import { FaTrash } from "react-icons/fa";
+
 function Todoitem(props) {
     const activityArr = props.activityArr
     const setactivityArr = props.setactivityArr
@@ -16,9 +18,9 @@ function Todoitem(props) {
         setactivityArr(temparr)
     }
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-between text-black">
             <p>{props.index + 1}{"."}{props.activity}</p>
-            <button className="text-red-800" onClick={() => { handleDelete(props.id) }}>delete</button>
+            <button className="  text-black" onClick={() => { handleDelete(props.id) }}><FaTrash /></button>
         </div>
     )
 }
